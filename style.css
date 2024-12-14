@@ -1,33 +1,80 @@
 body {
-    background-color: rgb(35, 35, 35);
+    display: flex; /* Use Flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping when the screen width is small */
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove default padding */
+    width: 100%; /* Ensure full width */
+    box-sizing: border-box; /* Include padding and borders in width calculations */
+    background-color: #101010;
 }
-.text {
-    font: 10vw Arial, sans-serif;
-    background-color: rgb(0, 31, 126);
-    color: aliceblue;
-    border-color: brown;
-    border: 30px;
+
+#topbar {
+    display: flex;
+    flex: 0 0 100%;
+    height: 5vh;
+    margin-bottom: 0.5vh;
+    align-items: center; /* Center divs horizontally */
+    justify-content: center; /* Center divs vertically */
+    background-color: #700000;
+    opacity: 1;
+    background-image:  linear-gradient(135deg, #000000 25%, transparent 25%), linear-gradient(225deg, #000000 25%, transparent 25%), linear-gradient(45deg, #000000 25%, transparent 25%), linear-gradient(315deg, #000000 25%, #700000 25%);
+    background-position:  1vh 0, 1vh 0, 0 0, 0 0;
+    background-size: 2vh 2vh;
+    background-repeat: repeat;
+    
+}
+.titleText {
+    width: 23vh;
+    height: 100%;
+    font: 4vh Arial, sans-serif;
+    color: whitesmoke;
+    background-color: #000000;
     text-align: center;
-    margin-bottom: 20px;
+}   
+#game, #buttons, #popup {
+    box-sizing: border-box; /* Ensure padding and borders are included in the width */
+    background-color: #303030;
+    border-style: solid;
+    border-width: 0.5vw;
+    border-color: #700000;
+    padding: 20px;
+    margin-right: 1vw;
+    margin-left: 1vw;
+    margin-bottom: 1vh;
 }
 #game {
-    background-color: rgb(255, 255, 255);
-    width: 60vw;
-    height: 50vw;
-    border-style: solid;
-    border-width: 10px;
-    border-color: rgb(0, 31, 126);
-    float: left;
-    padding: 20px;
-    margin-right: 2vw;
+    flex: 0 0 calc(60% - 2vw);
+    height: 75vh;
+}
+.tab {
+    width: 8%;
+    height: auto;
 }
 #buttons {
-    background-color: rgb(255, 255, 255);
-    width: 25vw;
-    height: 50vw;
-    border-style: solid;
-    border-width: 10px;
-    border-color: rgb(0, 31, 126);
-    float: left;
-    padding: 20px;
+    flex: 0 0 calc(40% - 2vw);
+    height: 75vh;
+}
+#popup {
+    flex: 0 0 calc(100% - 2vw);
+    height: 15vh;
+}
+@media screen and (max-width: calc(0.8 * 100vh)) {
+    body {
+        align-items: center; /* Center divs horizontally */
+        justify-content: center; /* Center divs vertically */
+    }
+
+    #game, #buttons, #popup {
+        flex: 0 0 calc(100% - 2vw); /* Set each div to take up 90% of the width */
+        margin: 0.5vh; /* Add vertical spacing between divs */
+    }
+    #game {
+        height: 40vh; /* Adjust height as needed */
+    }
+    #buttons {
+        height: 30vh; /* Adjust height as needed */
+    }
+    #popup {
+        height: 20vh; /* Adjust height as needed */
+    }
 }
