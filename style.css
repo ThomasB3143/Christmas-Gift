@@ -1,0 +1,33 @@
+body {
+    background-color: rgb(35, 35, 35);
+}
+.text {
+    font: 10vw Arial, sans-serif;
+    background-color: rgb(0, 31, 126);
+    color: aliceblue;
+    border-color: brown;
+    border: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+#game {
+    background-color: rgb(255, 255, 255);
+    width: 60vw;
+    height: 50vw;
+    border-style: solid;
+    border-width: 10px;
+    border-color: rgb(0, 31, 126);
+    float: left;
+    padding: 20px;
+    margin-right: 2vw;
+}
+#buttons {
+    background-color: rgb(255, 255, 255);
+    width: 25vw;
+    height: 50vw;
+    border-style: solid;
+    border-width: 10px;
+    border-color: rgb(0, 31, 126);
+    float: left;
+    padding: 20px;
+}
