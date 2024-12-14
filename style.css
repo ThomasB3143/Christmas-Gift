@@ -31,7 +31,7 @@ body {
     background-color: #000000;
     text-align: center;
 }   
-#game, #buttons, #popup {
+#game, #panel, #popup {
     box-sizing: border-box; /* Ensure padding and borders are included in the width */
     background-color: #303030;
     border-style: solid;
@@ -49,10 +49,65 @@ body {
 .tab {
     width: 8%;
     height: auto;
+    transform-origin: center; /* Default is center */
 }
-#buttons {
+#panel {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1vw;
     flex: 0 0 calc(40% - 2vw);
     height: 75vh;
+}
+.panelElement {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    background-color: #303030;
+    font: 2vh Arial, sans-serif;
+    color: whitesmoke;
+    border-style: solid;
+    border-width: 0.2vw;
+    border-color: #700000;
+    height: 100%;
+    margin-right: 1vw;
+    margin-left: 1vw;
+    margin-bottom: 1vh;    
+}
+.subPanel {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    box-sizing: border-box;
+    background-color: #303030;
+    font: 2vh Arial, sans-serif;
+    text-align: center;
+    color: whitesmoke;
+    border-style: solid;
+    border-width: 0.2vw;
+    border-color: #700000;
+    padding: 0;
+    margin-right: 0;
+    margin-left: 0;
+    margin: 0;
+}
+.subPanel:first-child {
+    border-left: none; /* Remove border for the first subpanel */
+    border-top: none;
+    border-right: none;
+}
+.subPanel:nth-child(2) {
+    border: none;
+}
+.button {
+    background-color: #505050;
+    color: #F03030;
+}
+#counter {
+    border-width: 0.2vw;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center;
 }
 #popup {
     flex: 0 0 calc(100% - 2vw);
@@ -64,14 +119,14 @@ body {
         justify-content: center; /* Center divs vertically */
     }
 
-    #game, #buttons, #popup {
+    #game, #panel, #popup {
         flex: 0 0 calc(100% - 2vw); /* Set each div to take up 90% of the width */
         margin: 0.5vh; /* Add vertical spacing between divs */
     }
     #game {
         height: 40vh; /* Adjust height as needed */
     }
-    #buttons {
+    #panel {
         height: 30vh; /* Adjust height as needed */
     }
     #popup {
