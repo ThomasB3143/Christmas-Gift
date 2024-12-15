@@ -11,22 +11,22 @@ body {
 #topbar {
     display: flex;
     flex: 0 0 100%;
-    height: 5vh;
-    margin-bottom: 0.5vh;
+    height: 5dvh;
+    margin-bottom: 0.5dvh;
     align-items: center; /* Center divs horizontally */
     justify-content: center; /* Center divs vertically */
     background-color: #700000;
     opacity: 1;
     background-image:  linear-gradient(135deg, #000000 25%, transparent 25%), linear-gradient(225deg, #000000 25%, transparent 25%), linear-gradient(45deg, #000000 25%, transparent 25%), linear-gradient(315deg, #000000 25%, #700000 25%);
-    background-position:  1vh 0, 1vh 0, 0 0, 0 0;
-    background-size: 2vh 2vh;
+    background-position:  1dvh 0, 1dvh 0, 0 0, 0 0;
+    background-size: 2dvh 2dvh;
     background-repeat: repeat;
     
 }
 .titleText {
-    width: 23vh;
+    width: 23dvh;
     height: 100%;
-    font: 4vh Arial, sans-serif;
+    font: 4dvh Arial, sans-serif;
     color: whitesmoke;
     background-color: #000000;
     text-align: center;
@@ -35,16 +35,16 @@ body {
     box-sizing: border-box; /* Ensure padding and borders are included in the width */
     background-color: #303030;
     border-style: solid;
-    border-width: 0.5vw;
+    border-width: 0.5dvw;
     border-color: #700000;
     padding: 20px;
-    margin-right: 1vw;
-    margin-left: 1vw;
-    margin-bottom: 1vh;
+    margin-right: 1dvw;
+    margin-left: 1dvw;
+    margin-bottom: 1dvh;
 }
 #game {
-    flex: 0 0 calc(60% - 2vw);
-    height: 75vh;
+    flex: 0 0 calc(60% - 2dvw);
+    height: 75dvh;
 }
 .tab {
     width: 8%;
@@ -54,24 +54,24 @@ body {
 #panel {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1vw;
-    flex: 0 0 calc(40% - 2vw);
-    height: 75vh;
+    gap: 1dvw;
+    flex: 0 0 calc(40% - 2dvw);
+    height: 75dvh;
 }
 .panelElement {
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
     background-color: #303030;
-    font: 2vh Arial, sans-serif;
+    font: calc(1.2dvw + 1.2dvh) Arial, sans-serif;
     color: whitesmoke;
     border-style: solid;
-    border-width: 0.2vw;
+    border-width: 0.2dvw;
     border-color: #700000;
     height: 100%;
-    margin-right: 1vw;
-    margin-left: 1vw;
-    margin-bottom: 1vh;    
+    margin-right: 1dvw;
+    margin-left: 1dvw;
+    margin-bottom: 1dvh;    
 }
 .subPanel {
     flex: 1;
@@ -80,11 +80,11 @@ body {
     align-items: center; /* Center vertically */
     box-sizing: border-box;
     background-color: #303030;
-    font: 2vh Arial, sans-serif;
+    font: calc(0.6dvw + 1.8dvh) Arial, sans-serif;
     text-align: center;
     color: whitesmoke;
     border-style: solid;
-    border-width: 0.2vw;
+    border-width: 0.2dvw;
     border-color: #700000;
     padding: 0;
     margin-right: 0;
@@ -104,32 +104,46 @@ body {
     color: #F03030;
 }
 #counter {
-    border-width: 0.2vw;
+    border-width: 0.2dvw;
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
     text-align: center;
 }
 #popup {
-    flex: 0 0 calc(100% - 2vw);
-    height: 15vh;
+    display: flex;
+    flex: 0 0 calc(100% - 2dvw);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 15dvh;
+    padding: 0;
 }
-@media screen and (max-width: calc(0.8 * 100vh)) {
+.words {
+    font: calc(0.4dvw + 1.8dvh) Arial, sans-serif;
+    text-align: center;
+    color: whitesmoke;
+    margin: 1dvw;
+    margin-top: 0.5dvh;
+    margin-bottom: 0.5dvh;
+    
+}
+@media screen and (max-width: calc(0.8 * 100dvh)) {
     body {
         align-items: center; /* Center divs horizontally */
         justify-content: center; /* Center divs vertically */
     }
 
     #game, #panel, #popup {
-        flex: 0 0 calc(100% - 2vw); /* Set each div to take up 90% of the width */
-        margin: 0.5vh; /* Add vertical spacing between divs */
+        flex: 0 0 calc(100% - 2dvw); /* Set each div to take up 90% of the width */
+        margin: 0.5dvh; /* Add vertical spacing between divs */
     }
     #game {
-        height: 40vh; /* Adjust height as needed */
+        height: 40dvh; /* Adjust height as needed */
     }
     #panel {
-        height: 30vh; /* Adjust height as needed */
+        height: 30dvh; /* Adjust height as needed */
     }
     #popup {
-        height: 20vh; /* Adjust height as needed */
+        height: 20dvh; /* Adjust height as needed */
     }
 }
