@@ -1,2 +1,2 @@
 # Awesome Web Game
-A Christmas gift for a lover of can tabs, genuinely the first time I've made a succesful website using html, css and js that actually works in a final version. You can visit and use it at "coelacanth.42web.io"!!!
+A Christmas gift for my partner, a lover of can tabs. The first time I've actually made a succesful website using html, css and js that actually works. You can visit and use it at coelacanth.42web.io!!!
